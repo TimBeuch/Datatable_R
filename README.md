@@ -1,2 +1,5 @@
 # Datatable_R
-Fonctions pour permettre de rapidement créer un tableau interactif sur R via la package DT.
+
+Ces fonctions ont pour but de rapidement créer un tableau interactif pour les rendus html généré grâce à R. Ces fonctions utilisent le package DT.
+
+Pour plus d'informations concernant le package DT veuillez vous rendre ici (https://rstudio.github.io/DT/) et ici (https://datatables.net/).

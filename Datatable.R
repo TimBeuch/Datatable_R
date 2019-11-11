@@ -45,7 +45,7 @@ TABLEAU_TITRE <- function(data,
 
 }
 
-# convert character indices to numeric
+# convertire les indices character en numeric
 convertIdx = function(i,
                       names,
                       n = length(names),

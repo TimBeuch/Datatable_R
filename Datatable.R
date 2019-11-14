@@ -222,7 +222,7 @@ TABLEAU_INTERACTIF <- function(data,
                                Source = NULL,
                                ...){
   
-  if (!require("pacman")) install.packages('pacman')
+  if (!require("pacman") == TRUE) (install.packages('pacman'))
   
   pacman::p_load(htmlwidgets, 
                  DT)

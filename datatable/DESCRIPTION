@@ -1,0 +1,21 @@
+Package: datatable
+Title: Faire rapidement un tableau interractif
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Timothe",
+           family = "Beuchon",
+           role = c("aut","cre"),
+           email = "beuchon.timothe@gmail.com")
+Description: Package qui permet de realiser un tableau interractif en francais a partir de la fonction DT::datatable
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: magrittr,
+	dplyr,
+	htmltools,
+	DT
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 6.1.1

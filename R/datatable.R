@@ -1,22 +1,21 @@
 #' Tableau interractif
 #'
 #' @param data La base de donnees
-#' @param number Un chiffre ou une chaîne de charactere
+#' @param number Un chiffre ou une chaine de charactere
 #' @param title Une chaine de charactere precisant le titre de notre tableau
-#' @param newname Une chaine de charactere precisant le titre des colonnes (format attendu : c("NEWNAME" = 3) ; c("Newname" = 1:3) ; c("test" = "mpg") ; c("bbieyv", ' nb vj', 'ampmc,n', 'pmln','essai', 'voiture', 'yu', 'ae', 'be', 'api', 'erop'))
+#' @param newname Une chaine de charactere precisant le titre des colonnes (plusieurs formats possible : c("NEWNAME" = 3) ; c("Newname" = 1:3) ; c("test" = "mpg") ; c("bbieyv", ' nb vj', 'ampmc,n', 'pmln','essai', 'voiture', 'yu', 'ae', 'be', 'api', 'erop'))
 #' @param Lecture Une chaine de charactere precisant comment lire le tableau
-#' @param Champs Une chaine de charactere precisant quel est le champs du tableau
-#' @param Source Une chaine de charactere precisant quelles sont les sources du tableau
-#' @param color Une chaine de charactere precisant la couleur qu'on veut donner à notre titre (format attendu : pour HEX -> "#FF5733" ; pour RGB - > "rgb(255, 87, 51)" ; pour HSL -> "hsl(11, 80%, 60%)" ; pour couleur present dans la palette de couleur par defaut -> "red" )
-#' @param ... Liste d'autre fonctions potentiellement compatible
+#' @param Champs Une chaine de charactere precisant le champs du tableau
+#' @param Source Une chaine de charactere precisant les sources du tableau
+#' @param color Une chaine de charactere precisant la couleur qu'on veut donner a notre titre (plusieurs formats possible : pour HEX -> "#FF5733" ; pour RGB - > "rgb(255, 87, 51)" ; pour HSL -> "hsl(11, 80, 60)" ; pour couleur present dans la palette de couleur par defaut -> "red" )
+#' @import magrittr htmltools htmlwidgets dplyr DT
 #'
-#' @return Un tableau pour les rendu html
-#' @import magrittr
-#' @importFrom htmltools tags htmlDependency
-#' @importFrom DT datatable
+#' @return un htmlwidgets sous forme de tableau
 #' @export
 #'
-#' @examples
+#' @examples mtcars %>% TABLEAU_INTERACTIF()
+#'
+
 TABLEAU_INTERACTIF <- function(data,
                                number = NULL,
                                title = NULL,
@@ -145,7 +144,7 @@ TABLEAU_INTERACTIF <- function(data,
                "}",
                sep = "")
 
-  JavaScript = JS(Java)
+  JavaScript = htmlwidgets::JS(Java)
 
 
 
@@ -201,26 +200,26 @@ TABLEAU_INTERACTIF <- function(data,
                           autoHideNavigation = TRUE,
                           rownames = FALSE,
                           escape = FALSE,
-                          colnames = newname,
+                          colnames = names(data),
                           filter = list(position = 'top',
                                         clear = FALSE)) %>%
-    formatStyle(names(data),
-                textAlign = 'center')
+    DT::formatStyle(names(data),
+                    textAlign = 'center')
 
   return(tableau)
 }
 
 #' Converti charactere en numeric
 #'
-#' @param i
-#' @param names
-#' @param n
-#' @param invert
+#' @param i iteration
+#' @param names chaine de caractere
+#' @param n longueur
+#' @param invert invertion
 #'
-#' @return
+#' @return une convertion de character en numeric ou l'inverse
 #' @export
 #'
-#' @examples
+#' @examples convertIdx(mtcars$mpg)
 convertIdx = function(i,
                       names,
                       n = length(names),

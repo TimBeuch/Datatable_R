@@ -7,8 +7,20 @@
 convertIdx(i, names, n = length(names), invert = FALSE)
 }
 \arguments{
-\item{invert}{}
+\item{i}{iteration}
+
+\item{names}{chaine de caractere}
+
+\item{n}{longueur}
+
+\item{invert}{invertion}
+}
+\value{
+une convertion de character en numeric ou l'inverse
 }
 \description{
 Converti charactere en numeric
+}
+\examples{
+convertIdx(mtcars$mpg)
 }

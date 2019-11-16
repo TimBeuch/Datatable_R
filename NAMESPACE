@@ -2,7 +2,8 @@
 
 export(TABLEAU_INTERACTIF)
 export(convertIdx)
+import(DT)
+import(dplyr)
+import(htmltools)
+import(htmlwidgets)
 import(magrittr)
-importFrom(DT,datatable)
-importFrom(htmltools,htmlDependency)
-importFrom(htmltools,tags)

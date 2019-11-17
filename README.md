@@ -1,9 +1,6 @@
 ---
 title: "Datatable"
 subtitle: 'pour faire de joli tableau en html'
-date: "17 novembre, 2019"
-organisation: "EHESS - ENS - PSL"
-author: 'Beuchon Timothé'
 abstract: Ce document présente le package datatable.
 output:
   html_document:
@@ -15,7 +12,6 @@ output:
     toc_collapsed: true
     toc_float: true
     number_sections: true
-    template: C:/Users/bleac/OneDrive/Bureau/R/Ressources/template.html
 ---
 
 

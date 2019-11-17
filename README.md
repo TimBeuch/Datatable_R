@@ -1,7 +1,4 @@
 ---
-title: "Datatable"
-subtitle: 'pour faire de joli tableau en html'
-abstract: Ce document présente le package datatable.
 output:
   html_document:
     keep_md: yes

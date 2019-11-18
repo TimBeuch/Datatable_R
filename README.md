@@ -1,7 +1,7 @@
 
 # Preambule
 
-Ce packages a pour but de rapidement créer un tableau interactif pour les rendus html généré grâce à R. Ce package est à comprendre comme étant un moyen plus rapide d'utiliser le package DT.
+Ce package a pour but de rapidement créer un tableau interactif pour les rendus html généré grâce à R. Ce package est à comprendre comme étant un moyen plus rapide d'utiliser le package DT.
 
 Pour plus d'informations concernant le package DT veuillez vous rendre ici (https://rstudio.github.io/DT/) et ici (https://datatables.net/).
 

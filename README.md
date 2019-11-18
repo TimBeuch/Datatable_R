@@ -5,9 +5,13 @@ Ce packages a pour but de rapidement créer un tableau interactif pour les rendu
 
 Pour plus d'informations concernant le package DT veuillez vous rendre ici (https://rstudio.github.io/DT/) et ici (https://datatables.net/).
 
+# Motivation
+
+Le package DT est très intéréssant mais compliqué à utilisé car je trouve la documentation très parcelaire (de mon point de vue), de ce fait j'ai réalisé des fonctions qui permet de simplifier son utilisation.
+
 # Fonction Tableau_Interractif
 
-Voici l'utilisation de la fonction TABLEAU_INTERRACTIF sans aucun argument
+Vous pouvez utiliser la fonction TABLEAU_INTERACTIF sans argument, ce qui vous donnera un rendu par défaut d'un tableau pour html. Ce rendu par défaut intègre les différents bouttons présent dans le DT package. 
 
 
 ```r
@@ -23,8 +27,11 @@ data %>%
 
 ## Donner un titre
 
-Il y a deux arguments pour donner un titre à son tableau "title" et "number". Number permet d'indiquer le numéro du tableau. De plus cet argument peut-être vide si vous souhaitez juste avoir "tableau :".
+Il y a deux arguments pour donner un titre à son tableau "title" et "number". 
 
+Number permet d'indiquer un numéro pour le tableau, mais peut aussi être vide. Number permet d'indiquer automiquement : "Tableau [number] :"
+
+Title permet d'indiquer le titre pour le tableau.
 
 ```r
 data %>% 
@@ -40,7 +47,9 @@ data %>%
 
 ## Couleur du titre
 
-Plusieurs façon d'indiquer la couleur qu'on veut associer à son titre :
+Il y a plusieurs façon d'indiquer la couleur qu'on veut associer à un titre.
+
+La couleur du titre peut-être mis au format HSL :
 
 
 ```r
@@ -50,6 +59,7 @@ data %>%
                      color =  "hsl(11, 80%, 60%)")
 ```
 
+La couleur du titre peut-être mis au format HEX :
 
 ```r
 data %>% 
@@ -58,6 +68,7 @@ data %>%
                      color = "#FF5733")
 ```
 
+La couleur du titre peut-être mis au format RGB :
 
 ```r
 data %>% 
@@ -66,6 +77,7 @@ data %>%
                      color = "rgb(255, 87, 51)")
 ```
 
+La couleur du titre peut-être mis au format caractere si la chaine de caractere correspond aux couleurs prédéfinis dans la paltte de couleur de base de R :
 
 ```r
 data %>% 
@@ -76,8 +88,9 @@ data %>%
 
 ## Changer les noms de colonne
 
-Plusieurs façons d'indiquer les nouveau nom de colonnes pour son tableau.
+Il y a plusieurs façons d'indiquer les nouveau nom de colonnes pour son tableau.
 
+On peut choisir de cibler quelle colonne doit changer de nom en indiquant son numero d'emplacement. 
 
 ```r
 data %>% 
@@ -86,6 +99,7 @@ data %>%
                      newname = c("newname"= 3))
 ```
 
+On peut choisir de cibler quelle colonne doit changer de nom en indiquant nom actuelle. 
 
 ```r
 data %>% 
@@ -94,6 +108,7 @@ data %>%
                      newname = c("newname"= "mpg"))
 ```
 
+On peut aussi associer des nouveaux noms de colonnes à un ensemble de noms de colonne.
 
 ```r
 data %>% 
@@ -102,6 +117,7 @@ data %>%
                      newname = c("newname"= 1:3))
 ```
 
+On peut tout aussi indiquer une chaine de caractere qui viendra remplacer les noms de colonnes du tableau.
 
 ```r
 data %>% 
@@ -112,6 +128,7 @@ data %>%
 
 ## Note de bas de tableau
 
+On peut associer les sources, champs et lecture du tableau via ces arguments.
 
 ```r
 data %>% 
@@ -123,6 +140,7 @@ data %>%
                      Source = "blablabla")
 ```
 
+Ne pas hesiter a mettre ces arguments dans l'environnement globale de R.
 
 ```r
 champ = "blabla"

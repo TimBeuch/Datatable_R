@@ -7,7 +7,7 @@ Pour plus d'informations concernant le package DT veuillez vous rendre ici (http
 
 # Motivation
 
-Le package DT est très intéréssant mais compliqué à utilisé car je trouve la documentation très parcelaire (de mon point de vue), de ce fait j'ai réalisé des fonctions qui permet de simplifier son utilisation.
+Le package DT est très intéréssant mais compliqué à utiliser car je trouve la documentation très parcelaire (de mon point de vue), de ce fait j'ai réalisé des fonctions qui permettent de simplifier son utilisation.
 
 # Fonction Tableau_Interractif
 

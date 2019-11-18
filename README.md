@@ -1,17 +1,3 @@
----
-output:
-  html_document:
-    keep_md: yes
-    code_folding: show
-    code_download: TRUE
-    toc: true
-    toc_depth: 3
-    toc_collapsed: true
-    toc_float: true
-    number_sections: true
----
-
-
 
 # Preambule
 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/datatable.R
 \name{convertIdx}
 \alias{convertIdx}
-\title{Converti charactere en numeric}
+\title{Convertion caractere en numeric}
 \usage{
 convertIdx(i, names, n = length(names), invert = FALSE)
 }
@@ -19,7 +19,7 @@ convertIdx(i, names, n = length(names), invert = FALSE)
 une convertion de character en numeric ou l'inverse
 }
 \description{
-Converti charactere en numeric
+Convertion caractere en numeric
 }
 \examples{
 convertIdx(mtcars$mpg)

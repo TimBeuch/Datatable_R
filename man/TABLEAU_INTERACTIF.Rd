@@ -32,6 +32,5 @@ un htmlwidgets sous forme de tableau
 Tableau interractif
 }
 \examples{
-TABLEAU_INTERACTIF(data = mtcars)
-
+mtcars \%>\% TABLEAU_INTERACTIF()
 }

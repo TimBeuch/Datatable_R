@@ -1,6 +1,6 @@
-Package: datatable
+Package: EZdatatable
 Title: Faire rapidement un tableau interractif
-Version: 0.0.0.9000
+Version: 0.0.1.0001
 Authors@R: 
     person(given = "Timothe",
            family = "Beuchon",

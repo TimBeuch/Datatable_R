@@ -1,10 +1,10 @@
 #' Title
 #'
-#' @param data
-#' @param number
-#' @param title
-#' @param color
-#' @param ...
+#' @param data La base de donnees
+#' @param number Une chaine de caractere ou un chiffre qui viendra se mettre devant le titre sous forme : "Tableau .... : "
+#' @param title Une chaine de caractere qui sera le titre
+#' @param color Chaine de caractere qui peut etre soit au format HSL, HEX, RGB, ou une chaine de caractere qui correspond a la palette de couleur de base de R.
+#' @param ... Parametre autre
 #'
 #' @return
 #'

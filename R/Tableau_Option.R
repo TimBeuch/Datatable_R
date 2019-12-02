@@ -1,7 +1,6 @@
 #' Title
 #'
-#' @param data
-#' @param messagePDF
+#' @param data La base de donnees
 #' @param ...
 #'
 #' @return

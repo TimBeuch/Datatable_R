@@ -1,10 +1,10 @@
 #' Title
 #'
-#' @param data
-#' @param Lecture
-#' @param Source
-#' @param Champs
-#' @param ...
+#' @param data La base de donnees
+#' @param Lecture Une chaine de caracteres
+#' @param Source Une chaine de caracteres
+#' @param Champs Une chaine de caracteres
+#' @param ... Parametre autre
 #'
 #' @return
 #'

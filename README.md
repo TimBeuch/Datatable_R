@@ -16,7 +16,7 @@ Vous pouvez utiliser la fonction TABLEAU_INTERACTIF sans argument, ce qui vous d
 
 ```r
 # devtools::install_github("TimBeuch/Datatable_R")
-pacman::p_load(datatable,
+pacman::p_load(EZdatatable,
                dplyr)
 
 data = mtcars

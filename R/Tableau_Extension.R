@@ -1,6 +1,6 @@
 #' Title
 #'
-#' @param data
+#' @param data La base de donnees
 #'
 #' @return
 #'

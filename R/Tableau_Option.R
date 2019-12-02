@@ -1,7 +1,7 @@
 #' Title
 #'
 #' @param data La base de donnees
-#' @param ...
+#' @param ... Parametre autre
 #'
 #' @return
 #'

@@ -86,6 +86,15 @@ data %>%
                      color = "red")
 ```
 
+La couleur du titre peut-être aussi une variable css (dans le cas où vous avez utilisé root) :
+
+```r
+data %>% 
+  TABLEAU_INTERACTIF(title = "tire quelconque",
+                     number = 1,
+                     color = "var(--primary-color)")
+```
+
 ## Changer les noms de colonne
 
 Il y a plusieurs façons d'indiquer les nouveau nom de colonnes pour son tableau.

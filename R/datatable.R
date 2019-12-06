@@ -22,7 +22,7 @@ TABLEAU_INTERACTIF <- function(data,
                                Lecture = NULL,
                                Champs = NULL,
                                Source = NULL,
-                               color = "#ad1c72",
+                               color = "#000000",
                                ...){
 
 # Nom des colonnes

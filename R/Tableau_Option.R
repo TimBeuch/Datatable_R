@@ -1,7 +1,7 @@
 #' Title
 #'
 #' @param data La base de donnees
-#' @param ... Parametre autre
+#' @param ...
 #'
 #' @return
 #'
@@ -13,9 +13,19 @@ TABLEAU_OPTION <- function(data,
                            Champs = Champs,
                            ...){
 
+  if(length(data)<=10){
+
+dom = 't<"lecture"><"source"><"champs">Bipr'
+
+  } else{
+
+dom = 'lft<"lecture"><"source"><"champs">Bipr'
+
+  }
+
   option = list(searchHighlight = TRUE,
                 select = TRUE,
-                dom = 'lft<"lecture"><"source"><"champs">Bipr',
+                dom = dom,
                 buttons = list( list ( extend = 'copy',
                                        text = '<u>C</u>opier',
                                        key = list(key = 'c',

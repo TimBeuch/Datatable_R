@@ -10,7 +10,7 @@
 #'
 #' @examples
 
-TABLEAU_TITRE <- function(data,
+TABLEAU_TITRE <- function(data = data,
                           number = NULL,
                           title = NULL,
                           color = color,

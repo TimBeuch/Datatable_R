@@ -61,7 +61,8 @@ if(nrow(data)<=10){
 
 # Création du tableau
   tableau = DT::datatable(data,
-                          caption = TABLEAU_TITRE(title = title,
+                          caption = TABLEAU_TITRE(data = data,
+                                                  title = title,
                                                   number = number,
                                                   color = color),
                           options = TABLEAU_OPTION(data = data,

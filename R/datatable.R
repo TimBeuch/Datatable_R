@@ -15,7 +15,7 @@
 #'
 #' @examples mtcars %>% TABLEAU_INTERACTIF()
 
-TABLEAU_INTERACTIF <- function(data = data,
+TABLEAU_INTERACTIF <- function(data,
                                number = NULL,
                                title = NULL,
                                newname = NULL,
@@ -51,13 +51,19 @@ TABLEAU_INTERACTIF <- function(data = data,
     stop("Il y a pas assez de nouveaux noms de colonne, essayez d'associer les nouveaux noms de colonne sous cette forme 'NEWNAME' = 'OLDNAME'.")
   }
 
-if(nrow(data)<=10){
+# Filter
+  if(nrow(data)<=10){
+    filt_pos = 'none'
+    } else {
+    filt_pos = 'top'
+    }
 
-  filt_pos = 'none'
-
-} else {
-  filt_pos = 'top'
-}
+#DOM
+  if(nrow(data)<=10){
+    dom = 't<"lecture"><"source"><"champs">Bipr'
+    } else {
+    dom = 'lft<"lecture"><"source"><"champs">Bipr'
+    }
 
 # Création du tableau
   tableau = DT::datatable(data,
@@ -65,7 +71,7 @@ if(nrow(data)<=10){
                                                   title = title,
                                                   number = number,
                                                   color = color),
-                          options = TABLEAU_OPTION(data = data,
+                          options = TABLEAU_OPTION(dom = dom,
                                                    Lecture = Lecture,
                                                    Champs = Champs,
                                                    Source = Source),

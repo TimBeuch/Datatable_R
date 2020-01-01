@@ -1,27 +1,17 @@
 #' Title
 #'
-#' @param data La base de donnees
+#' @param dom la chaine de caractère correspondant au dom
 #' @param ...
 #'
 #' @return
 #'
 #' @examples
 
-TABLEAU_OPTION <- function(data = data,
+TABLEAU_OPTION <- function(dom = dom,
                            Lecture = Lecture,
                            Source = Source,
                            Champs = Champs,
                            ...){
-
-  if(nrow(data)<=10){
-
-dom = 't<"lecture"><"source"><"champs">Bipr'
-
-  } else{
-
-dom = 'lft<"lecture"><"source"><"champs">Bipr'
-
-  }
 
   option = list(searchHighlight = TRUE,
                 select = TRUE,

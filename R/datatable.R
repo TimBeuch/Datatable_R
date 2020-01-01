@@ -15,7 +15,7 @@
 #'
 #' @examples mtcars %>% TABLEAU_INTERACTIF()
 
-TABLEAU_INTERACTIF <- function(data,
+TABLEAU_INTERACTIF <- function(data = data,
                                number = NULL,
                                title = NULL,
                                newname = NULL,

@@ -22,7 +22,7 @@ TABLEAU_INTERACTIF <- function(data,
                                Lecture = NULL,
                                Champs = NULL,
                                Source = NULL,
-                               color = "#000000",
+                               color = "#ad1c72",
                                ...){
 
 # Nom des colonnes
@@ -51,6 +51,13 @@ TABLEAU_INTERACTIF <- function(data,
     stop("Il y a pas assez de nouveaux noms de colonne, essayez d'associer les nouveaux noms de colonne sous cette forme 'NEWNAME' = 'OLDNAME'.")
   }
 
+if(nrow(data)<=10){
+
+  filt_pos = 'none'
+
+} else {
+  filt_pos = 'top'
+}
 
 # Création du tableau
   tableau = DT::datatable(data,
@@ -67,7 +74,7 @@ TABLEAU_INTERACTIF <- function(data,
                           rownames = FALSE,
                           escape = FALSE,
                           colnames = names(data),
-                          filter = list(position = 'top',
+                          filter = list(position = filt_pos,
                                         clear = FALSE)) %>%
     DT::formatStyle(names(data),
                     textAlign = 'center')

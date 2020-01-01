@@ -13,7 +13,7 @@ TABLEAU_OPTION <- function(data = data,
                            Champs = Champs,
                            ...){
 
-  if(length(data)<=10){
+  if(nrow(data)<=10){
 
 dom = 't<"lecture"><"source"><"champs">Bipr'
 

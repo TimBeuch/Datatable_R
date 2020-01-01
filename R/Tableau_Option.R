@@ -7,7 +7,7 @@
 #'
 #' @examples
 
-TABLEAU_OPTION <- function(data = data,
+TABLEAU_OPTION <- function(data,
                            Lecture = Lecture,
                            Source = Source,
                            Champs = Champs,

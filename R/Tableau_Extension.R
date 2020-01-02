@@ -1,12 +1,12 @@
 #' Title
 #'
-#' @param data La base de donnees
+#' @param ...
 #'
 #' @return
 #'
 #' @examples
 
-TABLEAU_EXTENSION <- function(data){
+TABLEAU_EXTENSION <- function(...){
 
   extension = c('Buttons',
                 'Select')

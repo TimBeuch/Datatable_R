@@ -7,7 +7,7 @@
 #'
 #' @return une convertion de character en numeric ou l'inverse
 #'
-#' @examples convertIdx(mtcars$mpg)
+#' @examples
 convertIdx = function(i,
                       names,
                       n = length(names),

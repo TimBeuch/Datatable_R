@@ -1,6 +1,6 @@
 Package: EZdatatable
 Title: Faire rapidement un tableau interractif
-Version: 0.0.1.0001
+Version: 0.0.1.0002
 Authors@R: 
     person(given = "Timothe",
            family = "Beuchon",
@@ -10,13 +10,17 @@ Description: Package qui permet de realiser un tableau interractif en francais a
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Imports: magrittr,
-	 dplyr,
-	 htmltools,
-	 htmlwidgets,
-	 DT
+Imports: 
+    magrittr,
+    dplyr,
+    htmltools,
+    htmlwidgets,
+    DT,
+    stringr,
+    stats,
+    rlang
 Suggests: 
     knitr,
     rmarkdown
 VignetteBuilder: knitr
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2

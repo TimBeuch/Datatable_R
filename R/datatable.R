@@ -13,12 +13,14 @@
 #' @return un htmlwidgets sous forme de tableau
 #' @export
 #'
-#' @examples mtcars %>% TABLEAU_INTERACTIF()
+#' @examples TABLEAU_INTERACTIF(data = mtcars)
 
 TABLEAU_INTERACTIF <- function(data,
                                number = NULL,
                                title = NULL,
                                newname = NULL,
+                               Stat = NULL,
+                               Note = NULL,
                                Lecture = NULL,
                                Champs = NULL,
                                Source = NULL,
@@ -60,10 +62,16 @@ TABLEAU_INTERACTIF <- function(data,
 
 #DOM
   if(nrow(data)<=10){
-    dom = 't<"lecture"><"source"><"champs">Bipr'
+    dom = 't<"stat"><"note"><"source"><"champs"><"lecture">Bipr'
     } else {
-    dom = 'lft<"lecture"><"source"><"champs">Bipr'
+    dom = 'lft<"stat"><"note"><"source"><"champs"><"lecture">Bipr'
     }
+
+  Stat =  ESCAPED(Stat)
+  Lecture =  ESCAPED(Lecture)
+  Champs =  ESCAPED(Champs)
+  Source =  ESCAPED(Source)
+  Note =  ESCAPED(Note)
 
 # Création du tableau
   tableau = DT::datatable(data,
@@ -72,6 +80,8 @@ TABLEAU_INTERACTIF <- function(data,
                                                   number = number,
                                                   color = color),
                           options = TABLEAU_OPTION(dom = dom,
+                                                   Stat = Stat,
+                                                   Note = Note,
                                                    Lecture = Lecture,
                                                    Champs = Champs,
                                                    Source = Source),

@@ -4,9 +4,19 @@
 \alias{TABLEAU_INTERACTIF}
 \title{Tableau interractif}
 \usage{
-TABLEAU_INTERACTIF(data, number = NULL, title = NULL, newname = NULL,
-  Lecture = NULL, Champs = NULL, Source = NULL, color = "#ad1c72",
-  ...)
+TABLEAU_INTERACTIF(
+  data,
+  number = NULL,
+  title = NULL,
+  newname = NULL,
+  Stat = NULL,
+  Note = NULL,
+  Lecture = NULL,
+  Champs = NULL,
+  Source = NULL,
+  color = "#ad1c72",
+  ...
+)
 }
 \arguments{
 \item{data}{La base de donnees}
@@ -32,5 +42,5 @@ un htmlwidgets sous forme de tableau
 Tableau interractif
 }
 \examples{
-mtcars \%>\% TABLEAU_INTERACTIF()
+TABLEAU_INTERACTIF(data = mtcars)
 }

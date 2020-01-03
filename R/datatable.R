@@ -79,7 +79,8 @@ TABLEAU_INTERACTIF <- function(data,
                                                   title = title,
                                                   number = number,
                                                   color = color),
-                          options = TABLEAU_OPTION(dom = dom,
+                          options = TABLEAU_OPTION(data = data,
+                                                   dom = dom,
                                                    Stat = Stat,
                                                    Note = Note,
                                                    Lecture = Lecture,
@@ -89,12 +90,10 @@ TABLEAU_INTERACTIF <- function(data,
                           class = c('display'),
                           autoHideNavigation = TRUE,
                           rownames = FALSE,
-                          escape = FALSE,
+                          escape = TRUE,
                           colnames = names(data),
                           filter = list(position = filt_pos,
-                                        clear = FALSE)) %>%
-    DT::formatStyle(names(data),
-                    textAlign = 'center')
+                                        clear = FALSE))
 
   return(tableau)
 }

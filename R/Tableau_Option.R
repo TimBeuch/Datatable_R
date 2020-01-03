@@ -7,7 +7,8 @@
 #'
 #' @examples
 
-TABLEAU_OPTION <- function(dom = dom,
+TABLEAU_OPTION <- function(data = data,
+                           dom = dom,
                            Stat = Stat,
                            Note = Note,
                            Lecture = Lecture,
@@ -18,6 +19,15 @@ TABLEAU_OPTION <- function(dom = dom,
   option = list(searchHighlight = TRUE,
                 select = TRUE,
                 dom = dom,
+                search = list( regex = TRUE,
+                               caseInsensitive = TRUE),
+                columnDefs = list( list ( className = "dt-center",
+                                          targets = "_all",
+                                          render = htmlwidgets::JS(
+                                            "function(data, type, row, meta) {",
+                                            "return type === 'display' && data.length > 10 ?",
+                                            "'<span title=\"' + data + '\">' + data.substr(0, 10) + '...</span>' : data;",
+                                            "}"))),
                 buttons = list( list ( extend = 'copy',
                                        text = '<u>C</u>opier',
                                        key = list(key = 'c',

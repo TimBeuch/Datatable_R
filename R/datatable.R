@@ -68,6 +68,18 @@ TABLEAU_INTERACTIF <- function(data,
     dom = 'lft<"stat"><"note"><"source"><"champs"><"lecture">Bipr'
     }
 
+  Stat = glue::glue(paste0(" ",
+                           Stat))
+  Note = glue::glue(paste0(" ",
+                           Note))
+  Lecture = glue::glue(paste0(" ",
+                              Lecture))
+  Champs = glue::glue(paste0(" ",
+                             Champs))
+  Source = glue::glue(paste0(" ",
+                             Source))
+
+
   Stat =  ESCAPED(Stat)
   Lecture =  ESCAPED(Lecture)
   Champs =  ESCAPED(Champs)

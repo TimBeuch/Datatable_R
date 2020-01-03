@@ -20,8 +20,8 @@ TABLEAU_OPTION <- function(data = data,
 if(Reduc == "TRUE"){
   render = htmlwidgets::JS(
     "function(data, type, row, meta) {",
-    "return type === 'display' && data.length > 8 ?",
-    "'<span title=\"' + data + '\">' + data.substr(0, 8) + '...</span>' : data;",
+    "return type === 'display' && data.length > 10 ?",
+    "'<span title=\"' + data + '\">' + data.substr(0, 10) + '...</span>' : data;",
     "}")
 }else{
   render = NULL

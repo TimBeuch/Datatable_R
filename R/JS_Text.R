@@ -20,38 +20,37 @@ JS_TEXT <- function(data,
                     Champs = Champs,
                     ...){
 
+  # Stat = "Il y a {nrow(iris)} lignes"
+  # Lecture = "{data[1,1]}"
+  # Champs = "l'école"
+  # Source = NULL
+  # Note = NULL
 
-  Java = paste0("function(settings, json) {")
+t = "function(settings, json) {"
+y = "}"
+css1 = ".css({'text-align': 'left', 'margin-top': '5px', 'font-size' : '0.8em', 'font-style': 'italic'});"
+css2 = ".css({'text-align': 'left', 'margin-bottom': '5px', 'font-size' : '0.8em', 'font-style': 'italic'});"
+css3 = ".css({'text-align': 'left', 'font-size' : '0.8em', 'font-style': 'italic'});"
 
-  if (!rlang::is_empty(Stat) == TRUE){
-    Java = sprintf("%s $('div.stat').html('Statistiques : %s.').css({'text-align': 'left', 'margin-top': '5px', 'font-size' : '0.8em', 'font-style': 'italic'});",
-                   Java,
-                   Stat)
-  } else {}
-  if (!rlang::is_empty(Note) == TRUE){
-    Java = sprintf("%s $('div.note').html('Note : %s.').css({'text-align': 'left', 'margin-top': '5px', 'font-size' : '0.8em', 'font-style': 'italic'});",
-                   Java,
-                   Note)
-  } else {}
-  if (!rlang::is_empty(Lecture) == TRUE){
-    Java = sprintf("%s $('div.lecture').html('Lecture : %s.').css({'text-align': 'left', 'margin-bottom': '5px', 'font-size' : '0.8em', 'font-style': 'italic'});",
-                   Java,
-                   Lecture)
-  } else {}
-  if (!rlang::is_empty(Source) == TRUE){
-    Java = sprintf("%s $('div.source').html('Source : %s.').css({'text-align': 'left', 'margin-top': '5px', 'font-size' : '0.8em', 'font-style': 'italic'});",
-                   Java,
-                   Source)
-  } else {}
-  if (!rlang::is_empty(Champs) == TRUE){
-    Java = sprintf("%s $('div.champs').html('Champs : %s.').css({'text-align': 'left', 'font-size' : '0.8em', 'font-style': 'italic'});",
-                   Java,
-                   Champs)
+  Java = glue::glue("{t}")
 
+  if (!Stat == " "){
+    Java = glue::glue("{Java} $('div.stat').html('Statistiques :{Stat}.'){css1}")
+  } else {}
+  if (!Note == " "){
+    Java = glue::glue("{Java} $('div.note').html('Note :{Note}.'){css1}")
+  } else {}
+  if (!Lecture == " "){
+    Java = glue::glue("{Java} $('div.lecture').html('Lecture :{Lecture}.'){css2}")
+  } else {}
+  if (!Source == " "){
+    Java = glue::glue("{Java} $('div.source').html('Source :{Source}.'){css1}")
+  } else {}
+  if (!Champs == " "){
+    Java = glue::glue("{Java} $('div.champs').html('Champs :{Champs}.'){css3}")
   } else {}
 
-Java = paste0(Java,
-              "}")
+Java = glue::glue("{Java}{y}")
 
 JavaScript = htmlwidgets::JS(Java)
 

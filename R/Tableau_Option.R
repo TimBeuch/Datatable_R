@@ -9,12 +9,23 @@
 
 TABLEAU_OPTION <- function(data = data,
                            dom = dom,
+                           Reduc = Reduc,
                            Stat = Stat,
                            Note = Note,
                            Lecture = Lecture,
                            Source = Source,
                            Champs = Champs,
                            ...){
+
+if(Reduc == "TRUE"){
+  render = htmlwidgets::JS(
+    "function(data, type, row, meta) {",
+    "return type === 'display' && data.length > 8 ?",
+    "'<span title=\"' + data + '\">' + data.substr(0, 8) + '...</span>' : data;",
+    "}")
+}else{
+  render = NULL
+}
 
   option = list(searchHighlight = TRUE,
                 select = TRUE,
@@ -23,11 +34,7 @@ TABLEAU_OPTION <- function(data = data,
                                caseInsensitive = TRUE),
                 columnDefs = list( list ( className = "dt-center",
                                           targets = "_all",
-                                          render = htmlwidgets::JS(
-                                            "function(data, type, row, meta) {",
-                                            "return type === 'display' && data.length > 10 ?",
-                                            "'<span title=\"' + data + '\">' + data.substr(0, 10) + '...</span>' : data;",
-                                            "}"))),
+                                          render = render)),
                 buttons = list( list ( extend = 'copy',
                                        text = '<u>C</u>opier',
                                        key = list(key = 'c',

@@ -63,7 +63,7 @@ TABLEAU_INTERACTIF <- function(data,
 
 #DOM
   if(nrow(data)<=10){
-    dom = 't<"stat"><"note"><"source"><"champs"><"lecture">Bipr'
+    dom = 't<"stat"><"note"><"source"><"champs"><"lecture">Bir'
     } else {
     dom = 'lft<"stat"><"note"><"source"><"champs"><"lecture">Bipr'
     }

@@ -52,6 +52,8 @@ css3 = ".css({'text-align': 'left', 'font-size' : '0.8em', 'font-style': 'italic
 
 Java = glue::glue("{Java}{y}")
 
+Java = paste0(Java)
+
 JavaScript = htmlwidgets::JS(Java)
 
 return(JavaScript)

@@ -35,7 +35,8 @@ css3 = ".css({'text-align': 'left', 'font-size' : '0.8em', 'font-style': 'italic
   #Java = glue::glue("{t}")
 Java = paste0(t)
 
-  if (!Stat == " "){
+  # if (!Stat == " "){
+if (rlang::is_empty(Stat) == FALSE){
     #Java = glue::glue("{Java} $('div.stat').html('Statistiques :{Stat}.'){css1}")
     Java = paste0(Java,
                   "$('div.stat').html('Statistiques :",
@@ -43,7 +44,8 @@ Java = paste0(t)
                   ".')",
                   css1)
   } else {}
-  if (!Note == " "){
+  #if (!Note == " "){
+if (rlang::is_empty(Note) == FALSE){
     #Java = glue::glue("{Java} $('div.note').html('Note :{Note}.'){css1}")
     Java = paste0(Java,
                   "$('div.note').html('Note :",
@@ -51,7 +53,8 @@ Java = paste0(t)
                   ".')",
                   css1)
   } else {}
-  if (!Lecture == " "){
+  # if (!Lecture == " "){
+if (rlang::is_empty(Lecture) == FALSE){
     #Java = glue::glue("{Java} $('div.lecture').html('Lecture :{Lecture}.'){css2}")
     Java = paste0(Java,
                   "$('div.lecture').html('Lecture :",
@@ -59,7 +62,8 @@ Java = paste0(t)
                   ".')",
                   css2)
   } else {}
-  if (!Source == " "){
+  # if (!Source == " "){
+  if (rlang::is_empty(Source) == FALSE){
     #Java = glue::glue("{Java} $('div.source').html('Source :{Source}.'){css1}")
     Java = paste0(Java,
                   "$('div.source').html('Source :",
@@ -67,7 +71,8 @@ Java = paste0(t)
                   ".')",
                   css1)
   } else {}
-  if (!Champs == " "){
+  # if (!Champs == " "){
+if (rlang::is_empty(Champs) == FALSE){
     #Java = glue::glue("{Java} $('div.champs').html('Champs :{Champs}.'){css3}")
     Java = paste0(Java,
                   "$('div.champs').html('Champs :",

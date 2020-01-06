@@ -35,24 +35,50 @@ css3 = ".css({'text-align': 'left', 'font-size' : '0.8em', 'font-style': 'italic
   Java = glue::glue("{t}")
 
   if (!Stat == " "){
-    Java = glue::glue("{Java} $('div.stat').html('Statistiques :{Stat}.'){css1}")
+    #Java = glue::glue("{Java} $('div.stat').html('Statistiques :{Stat}.'){css1}")
+    Java = paste0(Java,
+                  "$('div.stat').html('Statistiques :",
+                  Stat,
+                  ".')",
+                  css1)
   } else {}
   if (!Note == " "){
-    Java = glue::glue("{Java} $('div.note').html('Note :{Note}.'){css1}")
+    #Java = glue::glue("{Java} $('div.note').html('Note :{Note}.'){css1}")
+    Java = paste0(Java,
+                  "$('div.note').html('Note :",
+                  Note,
+                  ".')",
+                  css1)
   } else {}
   if (!Lecture == " "){
-    Java = glue::glue("{Java} $('div.lecture').html('Lecture :{Lecture}.'){css2}")
+    #Java = glue::glue("{Java} $('div.lecture').html('Lecture :{Lecture}.'){css2}")
+    Java = paste0(Java,
+                  "$('div.lecture').html('Lecture :",
+                  Lecture,
+                  ".')",
+                  css2)
   } else {}
   if (!Source == " "){
-    Java = glue::glue("{Java} $('div.source').html('Source :{Source}.'){css1}")
+    #Java = glue::glue("{Java} $('div.source').html('Source :{Source}.'){css1}")
+    Java = paste0(Java,
+                  "$('div.source').html('Source :",
+                  Source,
+                  ".')",
+                  css1)
   } else {}
   if (!Champs == " "){
-    Java = glue::glue("{Java} $('div.champs').html('Champs :{Champs}.'){css3}")
+    #Java = glue::glue("{Java} $('div.champs').html('Champs :{Champs}.'){css3}")
+    Java = paste0(Java,
+                  "$('div.champs').html('Champs :",
+                  Stat,
+                  ".')",
+                  css3)
   } else {}
 
-Java = glue::glue("{Java}{y}")
+#♥ava = glue::glue("{Java}{y}")
 
-Java = paste0(Java)
+Java = paste0(Java,
+              "}")
 
 JavaScript = htmlwidgets::JS(Java)
 

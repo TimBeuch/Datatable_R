@@ -32,7 +32,8 @@ css1 = ".css({'text-align': 'left', 'margin-top': '5px', 'font-size' : '0.8em', 
 css2 = ".css({'text-align': 'left', 'margin-bottom': '5px', 'font-size' : '0.8em', 'font-style': 'italic'});"
 css3 = ".css({'text-align': 'left', 'font-size' : '0.8em', 'font-style': 'italic'});"
 
-  Java = glue::glue("{t}")
+  #Java = glue::glue("{t}")
+Java = paste0(t)
 
   if (!Stat == " "){
     #Java = glue::glue("{Java} $('div.stat').html('Statistiques :{Stat}.'){css1}")
@@ -70,7 +71,7 @@ css3 = ".css({'text-align': 'left', 'font-size' : '0.8em', 'font-style': 'italic
     #Java = glue::glue("{Java} $('div.champs').html('Champs :{Champs}.'){css3}")
     Java = paste0(Java,
                   "$('div.champs').html('Champs :",
-                  Stat,
+                  Champs,
                   ".')",
                   css3)
   } else {}

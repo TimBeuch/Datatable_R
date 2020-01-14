@@ -1,12 +1,9 @@
-#' Title
+#' Texte for datatable
 #'
 #' @param data La base de donnees
 #' @param ... Parametre autre
 #'
 #' @return
-#'
-#' @examples
-
 TABLEAU_LANG <- function(data,
                          ...){
 

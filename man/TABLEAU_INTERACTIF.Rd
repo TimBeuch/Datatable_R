@@ -9,6 +9,7 @@ TABLEAU_INTERACTIF(
   number = NULL,
   title = NULL,
   newname = NULL,
+  Reduction = "FALSE",
   Stat = NULL,
   Note = NULL,
   Lecture = NULL,

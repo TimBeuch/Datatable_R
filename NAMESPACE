@@ -3,6 +3,8 @@
 export(TABLEAU_INTERACTIF)
 import(DT)
 import(dplyr)
+import(glue)
 import(htmltools)
 import(htmlwidgets)
 import(magrittr)
+importFrom(stringi,stri_rand_strings)

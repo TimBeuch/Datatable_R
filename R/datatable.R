@@ -20,7 +20,7 @@ TABLEAU_INTERACTIF <- function(data,
                                number = NULL,
                                title = NULL,
                                newname = NULL,
-                               Reduc = "FALSE",
+                               Reduction = "FALSE",
                                Stat = NULL,
                                Note = NULL,
                                Lecture = NULL,
@@ -62,25 +62,27 @@ TABLEAU_INTERACTIF <- function(data,
     filt_pos = 'top'
     }
 
-  ID = list(paste0("stat",stringi::stri_rand_strings(1, 12)),
-            paste0("note",stringi::stri_rand_strings(1, 12)),
-            paste0("source",stringi::stri_rand_strings(1, 12)),
-            paste0("champs",stringi::stri_rand_strings(1, 12)),
-            paste0("lecture",stringi::stri_rand_strings(1, 12)))
+  ID = list(paste0("stat",
+                   stringi::stri_rand_strings(1,
+                                              12)),
+            paste0("note",
+                   stringi::stri_rand_strings(1,
+                                              12)),
+            paste0("source",
+                   stringi::stri_rand_strings(1,
+                                              12)),
+            paste0("champs",
+                   stringi::stri_rand_strings(1,
+                                              12)),
+            paste0("lecture",
+                   stringi::stri_rand_strings(1,
+                                              12)))
 
   if(nrow(data)<=10){
     dom = glue::glue('t<"{ID[[1]]}"><"{ID[[2]]}"><"{ID[[3]]}"><"{ID[[4]]}"><"{ID[[5]]}">Bir')
   } else {
     dom = glue::glue('lft<"{ID[[1]]}"><"{ID[[2]]}"><"{ID[[3]]}"><"{ID[[4]]}"><"{ID[[5]]}">Bipr')
   }
-
-
-#DOM
-  # if(nrow(data)<=10){
-  #   dom = 't<class="stat" id=><class="note"><class="source"><class="champs"><class="lecture">Bir'
-  #   } else {
-  #   dom = 'lft<class="stat"><class="note"><class="source"><class="champs"><class="lecture">Bipr'
-  #   }
 
   Stat = glue::glue(paste0(" ",
                            Stat))
@@ -93,11 +95,10 @@ TABLEAU_INTERACTIF <- function(data,
   Source = glue::glue(paste0(" ",
                              Source))
 
-
-  Stat =  ESCAPED(Stat)
-  Lecture =  ESCAPED(Lecture)
-  Champs =  ESCAPED(Champs)
-  Source =  ESCAPED(Source)
+  Stat = ESCAPED(Stat)
+  Lecture = ESCAPED(Lecture)
+  Champs = ESCAPED(Champs)
+  Source = ESCAPED(Source)
   Note =  ESCAPED(Note)
 
 # Création du tableau
@@ -108,7 +109,7 @@ TABLEAU_INTERACTIF <- function(data,
                                                   color = color),
                           options = TABLEAU_OPTION(data = data,
                                                    dom = dom,
-                                                   Reduc = Reduc,
+                                                   Reduction = Reduction,
                                                    ID = ID,
                                                    Stat = Stat,
                                                    Note = Note,

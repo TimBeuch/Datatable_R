@@ -2,7 +2,7 @@
 % Please edit documentation in R/JS_Text.R
 \name{JS_TEXT}
 \alias{JS_TEXT}
-\title{Title}
+\title{Caption for datatable}
 \usage{
 JS_TEXT(
   data,
@@ -11,6 +11,7 @@ JS_TEXT(
   Lecture = Lecture,
   Source = Source,
   Champs = Champs,
+  ID = ID,
   ...
 )
 }
@@ -30,8 +31,8 @@ JS_TEXT(
 \item{...}{Parametre autre}
 }
 \value{
-
+JS function
 }
 \description{
-Title
+Caption for datatable
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/Tableau_Titre.R
 \name{TABLEAU_TITRE}
 \alias{TABLEAU_TITRE}
-\title{Title}
+\title{TTitle for datatable}
 \usage{
 TABLEAU_TITRE(data = data, number = NULL, title = NULL, color = color, ...)
 }
@@ -21,5 +21,5 @@ TABLEAU_TITRE(data = data, number = NULL, title = NULL, color = color, ...)
 
 }
 \description{
-Title
+TTitle for datatable
 }

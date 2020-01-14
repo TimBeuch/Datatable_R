@@ -6,8 +6,6 @@
 #' @param invert invertion
 #'
 #' @return une convertion de character en numeric ou l'inverse
-#'
-#' @examples
 convertIdx = function(i,
                       names,
                       n = length(names),

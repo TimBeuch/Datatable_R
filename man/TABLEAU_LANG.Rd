@@ -2,7 +2,7 @@
 % Please edit documentation in R/Tableau_Lang.R
 \name{TABLEAU_LANG}
 \alias{TABLEAU_LANG}
-\title{Title}
+\title{Texte for datatable}
 \usage{
 TABLEAU_LANG(data, ...)
 }
@@ -15,5 +15,5 @@ TABLEAU_LANG(data, ...)
 
 }
 \description{
-Title
+Texte for datatable
 }

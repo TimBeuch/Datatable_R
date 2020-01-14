@@ -2,16 +2,16 @@
 % Please edit documentation in R/Tableau_Extension.R
 \name{TABLEAU_EXTENSION}
 \alias{TABLEAU_EXTENSION}
-\title{Title}
+\title{Extension for datatable}
 \usage{
 TABLEAU_EXTENSION(...)
 }
 \arguments{
-\item{...}{}
+\item{...}{other}
 }
 \value{
 
 }
 \description{
-Title
+Extension for datatable
 }

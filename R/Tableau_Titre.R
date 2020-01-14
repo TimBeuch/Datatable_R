@@ -1,4 +1,4 @@
-#' Title
+#' TTitle for datatable
 #'
 #' @param data La base de donnees
 #' @param number Une chaine de caractere ou un chiffre qui viendra se mettre devant le titre sous forme : "Tableau .... : "
@@ -7,9 +7,6 @@
 #' @param ... Parametre autre
 #'
 #' @return
-#'
-#' @examples
-
 TABLEAU_TITRE <- function(data = data,
                           number = NULL,
                           title = NULL,

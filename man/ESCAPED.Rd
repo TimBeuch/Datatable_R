@@ -2,18 +2,18 @@
 % Please edit documentation in R/Tableau_Escaped.R
 \name{ESCAPED}
 \alias{ESCAPED}
-\title{Title}
+\title{escaped string}
 \usage{
 ESCAPED(String, ...)
 }
 \arguments{
 \item{String}{une chaine de caractere}
 
-\item{...}{}
+\item{...}{other}
 }
 \value{
 
 }
 \description{
-Title
+escaped string
 }

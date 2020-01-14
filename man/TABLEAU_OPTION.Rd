@@ -2,10 +2,13 @@
 % Please edit documentation in R/Tableau_Option.R
 \name{TABLEAU_OPTION}
 \alias{TABLEAU_OPTION}
-\title{Title}
+\title{Option for datatable}
 \usage{
 TABLEAU_OPTION(
+  data = data,
   dom = dom,
+  Reduction = Reduction,
+  ID = ID,
   Stat = Stat,
   Note = Note,
   Lecture = Lecture,
@@ -17,11 +20,11 @@ TABLEAU_OPTION(
 \arguments{
 \item{dom}{la chaine de caractère correspondant au dom}
 
-\item{...}{}
+\item{...}{other}
 }
 \value{
 
 }
 \description{
-Title
+Option for datatable
 }

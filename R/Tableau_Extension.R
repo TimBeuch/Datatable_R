@@ -1,11 +1,8 @@
-#' Title
+#' Extension for datatable
 #'
-#' @param ...
+#' @param ... other
 #'
 #' @return
-#'
-#' @examples
-
 TABLEAU_EXTENSION <- function(...){
 
   extension = c('Buttons',

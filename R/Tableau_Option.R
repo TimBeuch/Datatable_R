@@ -1,13 +1,12 @@
-#' Title
+#' Option for datatable
 #'
 #' @param dom la chaine de caractère correspondant au dom
 #' @param ... other
 #'
 #' @return
-
 TABLEAU_OPTION <- function(data = data,
                            dom = dom,
-                           Reduc = Reduc,
+                           Reduction = Reduction,
                            ID = ID,
                            Stat = Stat,
                            Note = Note,
@@ -25,7 +24,6 @@ if(Reduc == "TRUE"){
 }else{
   render = NULL
 }
-
   option = list(searchHighlight = TRUE,
                 select = TRUE,
                 dom = dom,
@@ -53,12 +51,12 @@ if(Reduc == "TRUE"){
                                                   altKey = TRUE)),
                                 list ( extend = 'print',
                                        text = '<u>I</u>mprimer',
-                                       messageBottom = glue::glue("{Stat}",
-                                                                  "{Note}",
-                                                                  "{Lecture}",
-                                                                  "{Source}",
-                                                                  "{Champs}",
-                                                                  .sep = "\n"),
+                                       # messageBottom = glue::glue("{Stat}",
+                                       #                            "{Note}",
+                                       #                            "{Lecture}",
+                                       #                            "{Source}",
+                                       #                            "{Champs}",
+                                       #                            .sep = "\n" ),
                                        key = list(key = 'i',
                                                   altKey = TRUE))),
                 pageLength = 10,
@@ -69,7 +67,7 @@ if(Reduc == "TRUE"){
                                        Lecture = Lecture,
                                        Source = Source,
                                        Champs = Champs)
-  )
+                )
 
   return(option)
 

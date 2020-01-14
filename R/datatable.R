@@ -8,8 +8,9 @@
 #' @param Champs Une chaine de charactere precisant le champs du tableau
 #' @param Source Une chaine de charactere precisant les sources du tableau
 #' @param color Une chaine de charactere precisant la couleur qu'on veut donner a notre titre (plusieurs formats possible : pour HEX -> "#FF5733" ; pour RGB - > "rgb(255, 87, 51)" ; pour HSL -> "hsl(11, 80, 60)" ; pour couleur present dans la palette de couleur par defaut -> "red" )
-#' @import magrittr htmltools htmlwidgets dplyr DT glue
+#' @import magrittr htmltools htmlwidgets dplyr DT
 #' @importFrom stringi stri_rand_strings
+#' @importFrom glue glue
 #'
 #' @return un htmlwidgets sous forme de tableau
 #' @export

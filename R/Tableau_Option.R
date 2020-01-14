@@ -15,7 +15,7 @@ TABLEAU_OPTION <- function(data = data,
                            Champs = Champs,
                            ...){
 
-if(Reduc == "TRUE"){
+if(Reduction == "TRUE"){
   render = htmlwidgets::JS(
     "function(data, type, row, meta) {",
     "return type === 'display' && data.length > 10 ?",

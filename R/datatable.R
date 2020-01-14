@@ -8,7 +8,8 @@
 #' @param Champs Une chaine de charactere precisant le champs du tableau
 #' @param Source Une chaine de charactere precisant les sources du tableau
 #' @param color Une chaine de charactere precisant la couleur qu'on veut donner a notre titre (plusieurs formats possible : pour HEX -> "#FF5733" ; pour RGB - > "rgb(255, 87, 51)" ; pour HSL -> "hsl(11, 80, 60)" ; pour couleur present dans la palette de couleur par defaut -> "red" )
-#' @import magrittr htmltools htmlwidgets dplyr DT glue stringi
+#' @import magrittr htmltools htmlwidgets dplyr DT glue
+#' @importFrom stringi stri_rand_strings
 #'
 #' @return un htmlwidgets sous forme de tableau
 #' @export
@@ -61,11 +62,11 @@ TABLEAU_INTERACTIF <- function(data,
     filt_pos = 'top'
     }
 
-  ID = list(paste0("stat",stri_rand_strings(1, 12)),
-            paste0("note",stri_rand_strings(1, 12)),
-            paste0("source",stri_rand_strings(1, 12)),
-            paste0("champs",stri_rand_strings(1, 12)),
-            paste0("lecture",stri_rand_strings(1, 12)))
+  ID = list(paste0("stat",stringi::stri_rand_strings(1, 12)),
+            paste0("note",stringi::stri_rand_strings(1, 12)),
+            paste0("source",stringi::stri_rand_strings(1, 12)),
+            paste0("champs",stringi::stri_rand_strings(1, 12)),
+            paste0("lecture",stringi::stri_rand_strings(1, 12)))
 
   if(nrow(data)<=10){
     dom = glue::glue('t<"{ID[[1]]}"><"{ID[[2]]}"><"{ID[[3]]}"><"{ID[[4]]}"><"{ID[[5]]}">Bir')

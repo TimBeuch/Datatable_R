@@ -1,15 +1,14 @@
 #' Title
 #'
 #' @param dom la chaine de caractère correspondant au dom
-#' @param ...
+#' @param ... other
 #'
 #' @return
-#'
-#' @examples
 
 TABLEAU_OPTION <- function(data = data,
                            dom = dom,
                            Reduc = Reduc,
+                           ID = ID,
                            Stat = Stat,
                            Note = Note,
                            Lecture = Lecture,
@@ -66,6 +65,7 @@ if(Reduc == "TRUE"){
                 language = TABLEAU_LANG(),
                 initComplete = JS_TEXT(Stat = Stat,
                                        Note = Note,
+                                       ID = ID,
                                        Lecture = Lecture,
                                        Source = Source,
                                        Champs = Champs)

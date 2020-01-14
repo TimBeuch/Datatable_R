@@ -8,7 +8,7 @@
 #' @param Champs Une chaine de charactere precisant le champs du tableau
 #' @param Source Une chaine de charactere precisant les sources du tableau
 #' @param color Une chaine de charactere precisant la couleur qu'on veut donner a notre titre (plusieurs formats possible : pour HEX -> "#FF5733" ; pour RGB - > "rgb(255, 87, 51)" ; pour HSL -> "hsl(11, 80, 60)" ; pour couleur present dans la palette de couleur par defaut -> "red" )
-#' @import magrittr htmltools htmlwidgets dplyr DT
+#' @import magrittr htmltools htmlwidgets dplyr DT glue stringi
 #'
 #' @return un htmlwidgets sous forme de tableau
 #' @export
@@ -61,23 +61,36 @@ TABLEAU_INTERACTIF <- function(data,
     filt_pos = 'top'
     }
 
-#DOM
-  if(nrow(data)<=10){
-    dom = 't<"stat"><"note"><"source"><"champs"><"lecture">Bir'
-    } else {
-    dom = 'lft<"stat"><"note"><"source"><"champs"><"lecture">Bipr'
-    }
+  ID = list(paste0("stat",stri_rand_strings(1, 12)),
+            paste0("note",stri_rand_strings(1, 12)),
+            paste0("source",stri_rand_strings(1, 12)),
+            paste0("champs",stri_rand_strings(1, 12)),
+            paste0("lecture",stri_rand_strings(1, 12)))
 
-  # Stat = glue::glue(paste0(" ",
-  #                          Stat))
-  # Note = glue::glue(paste0(" ",
-  #                          Note))
-  # Lecture = glue::glue(paste0(" ",
-  #                             Lecture))
-  # Champs = glue::glue(paste0(" ",
-  #                            Champs))
-  # Source = glue::glue(paste0(" ",
-  #                            Source))
+  if(nrow(data)<=10){
+    dom = glue::glue('t<"{ID[[1]]}"><"{ID[[2]]}"><"{ID[[3]]}"><"{ID[[4]]}"><"{ID[[5]]}">Bir')
+  } else {
+    dom = glue::glue('lft<"{ID[[1]]}"><"{ID[[2]]}"><"{ID[[3]]}"><"{ID[[4]]}"><"{ID[[5]]}">Bipr')
+  }
+
+
+#DOM
+  # if(nrow(data)<=10){
+  #   dom = 't<class="stat" id=><class="note"><class="source"><class="champs"><class="lecture">Bir'
+  #   } else {
+  #   dom = 'lft<class="stat"><class="note"><class="source"><class="champs"><class="lecture">Bipr'
+  #   }
+
+  Stat = glue::glue(paste0(" ",
+                           Stat))
+  Note = glue::glue(paste0(" ",
+                           Note))
+  Lecture = glue::glue(paste0(" ",
+                              Lecture))
+  Champs = glue::glue(paste0(" ",
+                             Champs))
+  Source = glue::glue(paste0(" ",
+                             Source))
 
 
   Stat =  ESCAPED(Stat)
@@ -95,6 +108,7 @@ TABLEAU_INTERACTIF <- function(data,
                           options = TABLEAU_OPTION(data = data,
                                                    dom = dom,
                                                    Reduc = Reduc,
+                                                   ID = ID,
                                                    Stat = Stat,
                                                    Note = Note,
                                                    Lecture = Lecture,

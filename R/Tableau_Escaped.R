@@ -1,11 +1,9 @@
-#' Title
+#' escaped string
 #'
 #' @param String une chaine de caractere
-#' @param ...
+#' @param ... other
 #'
 #' @return
-#'
-#' @examples
 ESCAPED <- function(String,
                     ...){
   escaped =  stringr::str_replace(string = String,

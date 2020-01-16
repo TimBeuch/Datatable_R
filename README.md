@@ -1,12 +1,3 @@
----
-title: "Untitled"
-output: 
-  html_document:
-    keep_md: true
----
-
-
-
 # Preambule
 
 Ce package a pour but de rapidement créer un tableau interactif pour les rendus html généré grâce à R. Ce package est à considérer comme un moyen plus rapide d'utiliser le package DT.

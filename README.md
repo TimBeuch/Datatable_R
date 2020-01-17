@@ -215,3 +215,6 @@ data %>%
                      Source = source,
                      Reduction = TRUE)
 ```
+## racourci clavier 
+
+Des raccourcis clavier sont présent dans les tableaux. Ils concernent l'utilisation des bouttons. On les utilise avec Alt + la lettre souligné. 

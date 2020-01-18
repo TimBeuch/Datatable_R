@@ -6,8 +6,8 @@
 #' @return
 ESCAPED <- function(String,
                     ...){
-  escaped =  stringr::str_replace(string = String,
-                                  pattern = "\\'",
-                                  replacement = "\\\\'")
+  escaped =  stringr::str_replace_all(string = String,
+                                      pattern = "\\'",
+                                      replacement = "\\\\'")
   return(escaped)
 }
